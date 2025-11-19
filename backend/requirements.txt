@@ -5,3 +5,4 @@ openpyxl
 django-cors-headers
 python-dotenv
 requests      # optional if using external LLM
+gunicorn
