@@ -1,0 +1,66 @@
+# ------------------------
+# Python / Django
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django related
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# Environment variables / keys
+.env
+*.env
+
+# Migrations (optional – keep if needed)
+# Uncomment if you don't want migrations in repo:
+# */migrations/*
+# !*/migrations/__init__.py
+
+
+# ------------------------
+# Node / React
+# ------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Production build
+frontend/build/
+frontend/.parcel-cache/
+dist/
+
+# React environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# ------------------------
+# Cache
+# ------------------------
+*.cache
+*.pytest_cache/
+coverage/
+cache/
