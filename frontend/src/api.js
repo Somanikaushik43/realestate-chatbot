@@ -1,7 +1,8 @@
 import axios from "axios";
 
 // Base URL for backend
-const API = "http://127.0.0.1:8000/api";
+const API = "https://realestate-chatbot-bual.onrender.com/api";
+
 
 // ------------------------------
 // QUERY AREA
