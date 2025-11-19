@@ -1,0 +1,24 @@
+.table-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+}
+
+/* prevent ugly multi-line column headers */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* make columns more readable */
+.custom-table th,
+.custom-table td {
+  padding: 8px 14px !important;
+  font-size: 14px;
+}
+
+/* glass-table style */
+.custom-table {
+  background-color: rgba(0,0,0,0.25) !important;
+  border-radius: 8px;
+}

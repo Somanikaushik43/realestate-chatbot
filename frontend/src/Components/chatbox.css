@@ -1,0 +1,208 @@
+/* -------------------------------------- */
+/*  CHATBOX MAIN CONTAINER                */
+/* -------------------------------------- */
+
+.chatbox-container {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  padding: 0;
+}
+
+
+/* -------------------------------------- */
+/*  MESSAGES AREA                          */
+/* -------------------------------------- */
+
+.chatbox-messages {
+  flex: 1;
+  padding: 18px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chatbox-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbox-messages::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+
+/* -------------------------------------- */
+/*  MESSAGE ROWS                           */
+/* -------------------------------------- */
+
+.msg-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.msg-left {
+  justify-content: flex-start;
+}
+
+.msg-right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+
+/* -------------------------------------- */
+/*  AVATAR                                 */
+/* -------------------------------------- */
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(5px);
+}
+
+.bot-avatar {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.user-avatar {
+  background: #ff7b00;
+  color: #fff;
+}
+
+
+/* -------------------------------------- */
+/*  CHAT BUBBLES                           */
+/* -------------------------------------- */
+
+.bubble {
+  max-width: 70%;
+  padding: 12px 18px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.45;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.user-bubble {
+  background: linear-gradient(135deg, #ff7b00, #ff4a00);
+  color: #fff;
+}
+
+.bot-bubble {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #e2e2e2;
+}
+
+/* Bubble animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* -------------------------------------- */
+/*  TYPING ANIMATION                       */
+/* -------------------------------------- */
+
+.typing {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: blink 1.4s infinite;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+
+/* -------------------------------------- */
+/*  INPUT AREA                              */
+/* -------------------------------------- */
+
+.chatbox-input-area {
+  padding: 14px 18px;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.1);
+}
+
+.chatbox-input {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+}
+
+
+/* SEND BUTTON */
+.chatbox-send-btn {
+  width: 52px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* UPLOAD BUTTON */
+.chatbox-upload-btn {
+  width: 52px;
+  height: 48px;
+  font-size: 22px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.chatbox-upload-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+
+/* -------------------------------------- */
+/*  RESPONSIVENESS                          */
+/* -------------------------------------- */
+
+@media (max-width: 600px) {
+  .bubble { max-width: 85%; }
+  .chatbox-container { height: 380px; }
+  .chatbox-upload-btn, .chatbox-send-btn { width: 42px; height: 42px; }
+}
